@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row" style="padding-top: 60px;">
+        <h1><img class="img-responsive" src="assets/images/logo.png" alt="">REMINDER</h1>
+
+        <div class="col"></div>
+        <div class="col box" >
+            <h3>Welcome {{aim}}</h3>
+            <h4>Add Event Here</h4>
+            <form action="" [formGroup]="eventForm" (ngSubmit)="saveEvent()" class="fm">
+            <div class="mb-3">
+                <input type="date" class="form-control" placeholder="date" name="uId" formControlName="date">
+            </div>
+           <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Event Name" name="event" formControlName="event">
+           </div>
+           
+            <button class="btn btn-dark" type="submit">Add Event</button> &nbsp;
+              <button routerLink="/events" type="submit" class="btn btn-dark"> View All Events </button> 
+        </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+

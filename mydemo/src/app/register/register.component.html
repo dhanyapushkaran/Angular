@@ -1,0 +1,32 @@
+
+
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4" style="padding-top: 10px ;">
+        <h1>My Project</h1>
+        <form action="" [formGroup]="registerForm" (ngSubmit)="register()">
+        <div>
+
+            <label for="">Enter Name</label>
+            <input type="text" class="form-control" name="ename" formControlName="ename">
+          </div>
+          <div *ngIf="(this.registerForm.get('ename')?.touched || this.registerForm.get('ename')?.dirty) && this.registerForm.get('ename')?.errors" class="error">Invalid Account Number</div>
+
+          <div>
+          <label for="">Account number</label>
+          <input type="text" class="form-control" name="acno" formControlName="acno">
+          </div>
+          <div *ngIf="(this.registerForm.get('acno')?.touched || this.registerForm.get('acno')?.dirty) && this.registerForm.get('acno')?.errors" class="error">Invalid Account Number</div>
+
+          <div>
+            <label for="">Password</label>
+            <input type="text" class="form-control" name="pswd" formControlName="pswd">
+            </div>
+            <div *ngIf="(this.registerForm.get('pswd')?.touched || this.registerForm.get('pswd')?.dirty) && this.registerForm.get('pswd')?.errors" class="error">Invalid Account Number</div>
+
+          <button class="btn btn-primary" type="submit">submit</button>
+        </form>
+    </div>
+    <div class="col-4"></div>
+</div>
+

@@ -1,0 +1,21 @@
+h3{ padding-left: 100px;
+    padding-top: 50px;
+    font-family: 'Style Script', cursive;
+    color: chocolate;
+}
+.fm{
+    padding-top: 20px;
+}
+h1{font-family: 'Crimson Text', serif;
+    text-align: center;
+    color: chocolate;
+    }
+    img{
+        width: 80px;
+        height: 50px;
+    }
+    .box{ border-radius: 10px;
+        height: 400px;
+        width: 100px;
+        background-color: rgba(102, 228, 250, 0.952);
+    }

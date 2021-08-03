@@ -1,0 +1,70 @@
+<div class="row row1">
+  <h1>The Book Gallery</h1>
+  <h6>Dhanya Pushkaran, Ernakulam</h6>
+</div>
+<div class="row2">
+  <samp>About us</samp>
+  <span>Conact Us</span>
+</div>
+<div class="row row3">
+  <div class="col-3 col1">
+
+    <div class="input-group mb-3" style="width: 80%; ;">
+      <form action="" [formGroup]="loginForm" (ngSubmit)="searchBook()">
+        <input type="text" placeholder="BookName" aria-label="Username" aria-describedby="basic-addon1" name="banme"
+          formControlName="bname">
+
+        <span>
+          <button type="submit" class="btn btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg></button>
+        </span>
+
+      </form>
+
+      <div>
+
+        <select name="" id="" (change)="onSelectOption($event)">
+          <option *ngFor="let searchOption of searchOptions" [value]="searchOption">{{searchOption}}</option>
+        </select>
+
+
+      </div> 
+      <div style="padding-top: 50px;"> 
+        <a href="">About Us</a> <br>
+        <a href="">Advanced Search</a> <br>
+        <a href="">Contact Us</a> <br>
+  
+        <a routerLink="/bookentry">Add Book Details</a>
+      </div>
+ 
+
+    </div>
+  </div>
+  <div class="col">
+    <nav class="navbar navbar-dark bg-dark" style="width: 80%; border-radius: 10px;">
+      <h2 style="color: white; padding-left: 40%;">Welcome!</h2>
+    </nav>
+    <div style="padding-top: 20px; padding-left: 100px;">
+      <table class="table table-dark" style=" width: 50%;">
+        <thead>
+          <tr>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let instock of inStocks">
+            <th>{{instock.bookname}}</th>
+            <th>{{instock.author}}</th>
+            <th>{{instock.price}}</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
